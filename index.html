@@ -15,6 +15,9 @@
 </head>
 
 <body>
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
     <center>
         <header>
             <h1>N Queens Visualizer</h1>
@@ -37,10 +40,22 @@
         </div>
     </main>
     <footer>
-        <p style="margin-bottom: -1px;">Developed by @arpangupta - <a href="https://github.com/arpanhub" target="_blank">GitHub</a></p>
+        <p>Developed by @arpangupta - <a href="https://github.com/arpanhub" target="_blank">GitHub</a></p>
     </footer>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript to ensure loading animation shows for at least 1 second
+        const loadingDiv = document.getElementById('loading');
+        
+        // Show loading animation immediately on page load
+        loadingDiv.style.display = 'flex';
+        
+        // Delay hiding the loading animation to ensure it shows for at least 1 second
+        setTimeout(function() {
+            loadingDiv.style.display = 'none';
+        }, 1000); // 1000 milliseconds = 1 second
+    </script>
 </body>
 
 </html>
